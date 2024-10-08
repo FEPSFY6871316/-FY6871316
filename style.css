@@ -1,13 +1,15 @@
 table {
+    align-items: center;
+    margin:auto;
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width:30%;
 }
 
 td, th {
-    border: 1px solid #dddddd
+    border: 1px solid #dddddd;
     text-align: left;
-    padding: 8px
+    padding: 8px;
 }
 
 tr:nth-child(even) {
@@ -20,4 +22,9 @@ p.ex1 {
 
 .mySlides {
     display:none;
+}
+
+body {
+    background-color: #FFFFFF;
+    margin-left: 50px;
 }
