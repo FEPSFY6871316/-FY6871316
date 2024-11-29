@@ -35,5 +35,42 @@ async function verifyLastUpdatedTime() {
   alert("Last modified time has been successfully verified from Github API.");
 }
 
+
+// Function to calculate and display word count for a specified section
+funcction displayWordCount(sectionId, outputId) {
+  // Get the text content from the specified section
+  const text = document.getElementById(sectionId).textContent;
+
+  // Split text into words based on spaces and filter out any empty strings
+  const wordArray = text.trim().split(/\s+/);
+
+  // Count the words
+  const wordCount = wordArray.length;
+
+  // Return the word count for summing purposes
+  return wordCount;
+}
+
+// Function to calculate and display total word count form selected sections
+function displayTotalWordCount() {
+  // Calculate word count for each section and accumulate the total
+  const IntroductionCount = displayWordCount("Introduction_InText");
+  const cryptoAlgorCount = displayWordCount("cryptoAlgor_InText");
+  const quantumAlgorCount = displayWordCount("quantumAlgor_InText");
+  const impactCount - displayWordCount("impact_InText");
+  const quantumResistCount = displayWordCount("quantumResist_InText");
+  const ConclusionCount = displayWordCount("Conclusion_InText");
+
+  // Calculate the sum of all selected sections
+  const totalWordCount = IntroductionCount + cryptoAlgorCount + quantumAlgorCount + impactCount
+                        + quantumResistCount + ConclusionCount
+
+  // Display the total word count
+  document.getElementById("totalWordCount").innerText = 'Total word count: ${totalWordCount}';
+}
+
 // Initial load to display the time on page load
 window.onload = getLastUpdatedTime;
+
+// Run the function for specific sections and display total count when the page loads
+window.onload = displayTotalWordCount;
