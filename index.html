@@ -39,7 +39,7 @@
     </tr>
 
     <tr>
-      <td><a href="#Quantum-resistant encryption techniques">Quantum-resistant encryption techniques</td>
+      <td><a href="#Quantum-resistant/post-quantum encryption techniques">Quantum-resistant/post-quantum encryption techniques</td>
     </tr>
 
     <tr>
@@ -55,15 +55,29 @@
       <h3 id="Abstract">Abstract</h3>
         <p class="ex1">
           <pre>
-Since the invention of the internet, there has been an exponential growth in the transmission of data across the globe. To protect this data,
-cyber security is the topic for providing the safety of 
+Since the invention of the internet, there has been an exponential growth in the communication of data across the globe. To protect this
+data, cyber security is the topic for providing secure channels on the internet by using modern cryptography to encrypt and decrypt data
+between two parties. But the future of quantum algorithms will render these useless once reliable quantum computers are made. IBM
+are at the head of this, recently introducing their 'Quantum System Two' already far surpassing classical brute-force methods of
+classical supercomputers using over 100 qubits to do this ([IBM Quantum System Two]), this article will go over the impact of
+quantum cryptography in todays cybersecurity and what can be done to prevent cyber attacks with quantum-resistant encryption
+techniques to mitigate this.
           </pre>
         </p>
     <hr>
       <h3 id="Introduction">Introduction</h3>
         <p class="ex1">
           <pre>
-TEXT
+To begin with the fundamentals of cryptography, it is the process of manipulating the raw message (plaintext) into ciphertext (encryption)
+from the sender with the goal of making it unrecognisable to an unwanted party that may intercept this (eavesdropper), ensuring the security
+of the hidden message is kept between the two communicating parties for accessing this information ([Tech Target]). The receiver will use a
+code(key) to decrypt the ciphertext to unlock the original message. From then up to modern cryptography we use this everyday in our lives whether
+it may be authenticating your identity with a password or downloading something of the internet, to put simply, it is "the study of mathematical
+techniques for securing digital information, systems, and distributed computations against adversarial attacks ."
+([_Introduction to Modern Cryptography_, CRC Press LLC, 2014]). In the hyper-information age, we secure this digital information electronically
+using i.e. algorithms that process by either manipulating the binary or hex in an irreversible way like a hash or generating large prime numbers
+that modern computers find hard factoring and more that will be covered in the next section. Soon this will change, quantum physics is
+not a new field in science but has been progressing with small breakthroughs over the years.
           </pre>
         </p>
     <hr>
@@ -88,7 +102,7 @@ TEXT
           </pre>
         </p>
     <hr>
-      <h3 id="Quantum-resistant encryption techniques">Quantum-resistant encryption techniques</h3>
+      <h3 id="Quantum-resistant/post-quantum encryption techniques">Quantum-resistant/post-quantum encryption techniques</h3>
         <p class="ex1">
           <pre>
 TEXT
@@ -108,5 +122,11 @@ TEXT
 TEXT
           </pre>
         </p>
+<div id="last-updated">Loading last update time...</div>
+<button onclick="verifyLastUpdatedTime()">
+  Verify Last Modified Time
+</button>
+<p id="totalWordCount"></p>
+<hr> 
   </body>  
 </html>
