@@ -28,3 +28,9 @@ body {
     background-color: #FFFFFF;
     margin-left: 50px;
 }
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 8px 16px;
+}
