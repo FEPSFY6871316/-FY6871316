@@ -37,7 +37,7 @@ async function verifyLastUpdatedTime() {
 
 
 // Function to calculate and display word count for a specified section
-funcction displayWordCount(sectionId, outputId) {
+function displayWordCount(sectionId, outputId) {
   // Get the text content from the specified section
   const text = document.getElementById(sectionId).textContent;
 
@@ -55,14 +55,14 @@ funcction displayWordCount(sectionId, outputId) {
 function displayTotalWordCount() {
   // Calculate word count for each section and accumulate the total
   const IntroductionCount = displayWordCount("Introduction_InText");
-  const cryptoAlgorCount = displayWordCount("CryptoAlgor_InText");
-  const quantumAlgorCount = displayWordCount("QuantumAlgor_InText");
-  const impactCount - displayWordCount("Impact_InText");
-  const quantumResistCount = displayWordCount("QuantumResist_InText");
+  const CryptoAlgorCount = displayWordCount("CryptoAlgor_InText");
+  const QuantumAlgorCount = displayWordCount("QuantumAlgor_InText");
+  const ImpactCount - displayWordCount("Impact_InText");
+  const QuantumResistCount = displayWordCount("QuantumResist_InText");
   const ConclusionCount = displayWordCount("Conclusion_InText");
 
   // Calculate the sum of all selected sections
-  const totalWordCount = IntroductionCount + cryptoAlgorCount + quantumAlgorCount + impactCount
+  const totalWordCount = IntroductionCount + CryptoAlgorCount + quantumAlgorCount + impactCount
                         + quantumResistCount + ConclusionCount
 
   // Display the total word count
