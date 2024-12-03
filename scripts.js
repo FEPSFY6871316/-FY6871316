@@ -10,7 +10,7 @@ async function getLastUpdatedTime(){
       headers: {
         'Accept': 'application/vnd.github.v3+json',
       }
-    }};
+    });
     if (!response.ok) {
       throw new Error('Error fetching data: ${response.data} - ${response.statusText}');
     }
