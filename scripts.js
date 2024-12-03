@@ -55,10 +55,10 @@ funcction displayWordCount(sectionId, outputId) {
 function displayTotalWordCount() {
   // Calculate word count for each section and accumulate the total
   const IntroductionCount = displayWordCount("Introduction_InText");
-  const cryptoAlgorCount = displayWordCount("cryptoAlgor_InText");
-  const quantumAlgorCount = displayWordCount("quantumAlgor_InText");
-  const impactCount - displayWordCount("impact_InText");
-  const quantumResistCount = displayWordCount("quantumResist_InText");
+  const cryptoAlgorCount = displayWordCount("CryptoAlgor_InText");
+  const quantumAlgorCount = displayWordCount("QuantumAlgor_InText");
+  const impactCount - displayWordCount("Impact_InText");
+  const quantumResistCount = displayWordCount("QuantumResist_InText");
   const ConclusionCount = displayWordCount("Conclusion_InText");
 
   // Calculate the sum of all selected sections
