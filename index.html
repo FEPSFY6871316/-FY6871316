@@ -54,13 +54,13 @@
       <h3 id="Abstract">Abstract</h3>
         <p class="ex1">
           <pre>
-Since the invention of the internet, there has been an exponential growth in the communication of data across the globe. To protect this
-data, cyber security is the topic for providing secure channels on the internet by using modern cryptography to encrypt and decrypt data
-between two parties. But the future of quantum algorithms will render these useless once reliable quantum computers are made. IBM
-are at the head of this, recently introducing their 'Quantum System Two' already far surpassing classical brute-force methods of
-classical supercomputers using over 100 qubits to do this (<a href="#References">IBM Quantum System Two</a>, ), this article will go over the impact of
-quantum cryptography in todays cybersecurity and what can be done to prevent cyber attacks with quantum-resistant encryption
-techniques to mitigate this.
+Since the invention of the internet, there has been an exponential growth in the communication of data across the globe. To
+protect this data, cyber security is the topic for providing secure channels on the internet by using modern cryptography to
+encrypt and decrypt data between two parties. But the future of quantum algorithms will render these useless once reliable
+quantum computers are made. Quantum cryptography in todays cybersecurity can be used to prevent cyber attacks with quantum-resistant
+encryption techniques and quantum key distribution to secure channels between parties. IBM are at the head of this, recently
+introducing their 'Quantum System Two' already far surpassing classical brute-force methods of classical supercomputers using over
+100 qubits to do this (<a href=#References>IBM Quantum System Two</a>, no date).
           </pre>
         </p>
     <hr>
@@ -69,42 +69,73 @@ techniques to mitigate this.
           <pre id="Introduction_InText">
 To begin with the fundamentals of cryptography, it is the process of manipulating the raw message (plaintext) into ciphertext (encryption)
 from the sender with the goal of making it unrecognisable to an unwanted party that may intercept this (eavesdropper), ensuring the security
-of the hidden message is kept between the two communicating parties for accessing this information ([Tech Target]). The receiver will use a
-code(key) to decrypt the ciphertext to unlock the original message. From then up to modern cryptography we use this everyday in our lives whether
-it may be authenticating your identity with a password or downloading something of the internet, to put simply, it is "the study of mathematical
-techniques for securing digital information, systems, and distributed computations against adversarial attacks ."
-([_Introduction to Modern Cryptography_, CRC Press LLC, 2014]). In the hyper-information age, we secure this digital information electronically
-using i.e. algorithms that process by either manipulating the binary or hex in an irreversible way like a hash or generating large prime numbers
-that modern computers find hard factoring and more that will be covered in the next section. Soon this will change, quantum physics is
-not a new field in science but has been progressing with small breakthroughs over the years.
+of the hidden message is kept between the two communicating parties for accessing this information (<a href="#References">Tech Target</a>, 2024).
+The receiver will use a code(key) to decrypt the ciphertext to unlock the original message. From then up to modern cryptography we use this everyday
+in our lives whether it may be authenticating your identity with a password or downloading something of the internet, to put simply, it is "the study
+of mathematical techniques for securing digital information, systems, and distributed computations against adversarial attacks ."
+(<a href=#References>Katz, J, & Lindell, Y</a>, 2014). In the hyper-information age, we secure this digital information electronically using i.e.
+algorithms that process by either manipulating the binary or hex in an irreversible way like a hash or generating large prime numbers that modern
+computers find hard factoring and more that will be covered in the next section. Soon this will change, quantum physics is not a new field in science
+but has been progressing with small breakthroughs over the years.
           </pre>
         </p>
     <hr>
       <h3 id="Cryptograhic algorithms used today">Cryptograhic algorithms used today</h3>
         <p class="ex1">
           <pre id="CryptoAlgor_InText">
-TEXT
+Cryptography uses a set of procedures known as algorithms to encrypt and decrypt messages for communication. A message space can defined from these
+algorithms: generate a key, encrypt, decrypt; verification for message authentication and key exchange (<a href="#References">Tech Target</a>, 2024).
+Today's cryptography splits into two categories: Symmetric systems, using the same key to encrypt and decrypt data like Data Encryption Standard (DES)
+and Advanced Encryption Standard (AES) which encode blocks of information at a time using a private key that all parties trying to communicate must know
+(<a href=#References>Lopez. S</a>, 2018). Asymmetric encryption makes transmission of data more secure by using a public and private key, one party will
+generate both keys that relate to each other, the public key is sent out for anyone but the private key will be kept and is the only key that can decrypt
+messages. "This whole cryptography scheme relies on the fact that no one can break the encryption protocol. If they could break it, then they could read
+Alice's message even if they did not have Alice's private key" (<a href=#References>Hughes, C.,  Isaacson, J</a>, 2021) this way, there is only one point
+of failure thus resulting in a more secure encryption technique. Some include RSA and the Diffie-Helman key exchange. Hash functions are a different tool
+"not to encode information, rather it serves as a one-way function to verify the integrity of a message" (<a href=#References>Lopez, S</a>, 2018), used to
+store passwords in an unreadable way only computers can verify in a database but an attacker would not be ableto understand.
           </pre>
         </p>
     <hr>
       <h3 id="Quantum cryptography and its algorithms">Quantum cryptography and its algorithms</h3>
         <p class="ex1">
           <pre id="QuantumAlgor_InText">
-TEXT
+Quantum computers are fundamentally the same as classical computers in the way that they both share the use of bits, bits can represent a 1 or a 0 (on/off)
+quantum computers using qubits. These are particles in superposition with each other therefore represent both 0 and 1 at the same time which would make quantum
+computers much faster (<a href=#References>Dubey, P. and Yadav, O.</a>, 2020), having two states at once can perform single operation where it would take two for
+classical bits. Although the properties of these quantum bits only take on one possible bit after being measured (<a href=#References>Hughes, C.,  Isaacson, J.</a>, 2021)
+due to the observer effect. Shor's algorithm, proposed in 1998 by Peter Shor, used qubits to factorise very large integers up to 1024-bits in 10243 operations
+(<a href=#References>utimaco.com</a>, 2020) in polynomial time using a Quantum Fourier transform. Grover's algorithm is a tool for searching an unsorted/unstructured
+database by applying a series of quantum operations to the input state, which is initialized as a superposition of all possible search states. The key idea behind
+Grover’s algorithm is to amplify the amplitude of the marked state (<a href=#References>GeeksforGeeks</a>, 2023) while able to search in O(n^1/2) time
+(<a href=#References>Rogers, D.</a>, 2022).
           </pre>
         </p>
     <hr>
       <h3 id="The impact of quantum algorithms on existing algorithms">The impact of quantum algorithms on existing algorithms</h3>
         <p class="ex1">
           <pre id="Impact_InText">
-TEXT
+Quantum computing although still in the early stages of development, their impact on classical algorithms will be significant. With its potential to solve certain
+problems exponentially faster than classical computers with the help of parallelism (<a href=#References>Hughes, C., Isaacson, J.</a>, 2021), it rises the implications on
+the field of cybersecurity. This is problematic because "A quantum computer will allow the attacker to read information that has been encrypted in the past, and forge
+information in the future" (<a href=#References>www.ncsc.gov.uk</a>, 2020), although new information secured against quantum computers is found; it would not account for
+all the current private information on the internet which is a security risk. For specific examples like Shor's algorithm, it can efficiently factor large integers which
+will render public-key cryptosystems like RSA vulnerable. Grover's algorithm gives up to a quadratic speedup to current search algorithms like linear and binary search in an
+unstructured database, impacting brute-force attacks on cryptographic systems.
           </pre>
         </p>
     <hr>
       <h3 id="Quantum-resistant/post-quantum encryption techniques">Quantum-resistant/post-quantum encryption techniques</h3>
         <p class="ex1">
           <pre id="QuantumResist_InText">
-TEXT
+The easiest way to eavesdrop between the communicating parties is to intercept between these two parties, but what if even the transportation itself was impossible to eavesdrop.
+Quantum Key Distribution is the method of building a secure key between two parties by use of photon emission through a fibre optic cable, the polarisation of the sender's side
+orientates the photon to a specific orientation to represent a qubit with data. The receiver uses two beam splitters to read the positions of the photons and these are compared
+to the decoded positions by both parties to create the key (<a href=#References>IBM</a>, 2023). Heisenberg uncertainty principle states that it is not possible to measure the
+quantum state of any system without disturbing that system, this way a secure key distribution becomes possible to transmit over a quantum channel (e.g. optical fibre) and not
+the encrypted message (<a href=#References>Dubey and Yadav</a>, 2021), this way securing the transmission of information across the internet. See Figure 1 for flow chart of
+Quantum Key Distribution.
+<img src="QKD_Flow_Chart.png" alt="QKD Flow Chart">
           </pre>
         </p>
     <hr>
