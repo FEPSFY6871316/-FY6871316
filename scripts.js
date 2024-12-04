@@ -1,8 +1,8 @@
-async function getLastUpdatedTime(){
+async function getLastUpdatedTime() {
   const username =  'FEPSFY6871316';
   const repo = 'FY6871316';
 
-  const url = `https://api.gitbub.com/repos/${username}/${repo}/commits`;
+  const url = `https://api.github.com/repos/${username}/${repo}/commits`;
 
   try {
     const response = await fetch(url, {
