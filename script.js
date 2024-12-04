@@ -58,7 +58,7 @@ function displayTotalWordCount() {
   const IntroductionCount = displayWordCount("Introduction_InText");
   const CryptoAlgorCount = displayWordCount("CryptoAlgor_InText");
   const QuantumAlgorCount = displayWordCount("QuantumAlgor_InText");
-  const ImpactCount - displayWordCount("Impact_InText");
+  const ImpactCount = displayWordCount("Impact_InText");
   const QuantumResistCount = displayWordCount("QuantumResist_InText");
   const ConclusionCount = displayWordCount("Conclusion_InText");
 
