@@ -1,6 +1,6 @@
 async function getLastUpdatedTime(){
-  const username =  "FEPSFY6871316";
-  const repo = "FY6871316";
+  const username =  'FEPSFY6871316';
+  const repo = 'FY6871316';
 
   const url = `https://api.gitbub.com/repos/${username}/${repo}/commits`;
 
@@ -16,14 +16,14 @@ async function getLastUpdatedTime(){
     }
     const commits = await response.json();
     if (commits && commits.length > 0) {
-      const lastCommitDate = new Date(Commits[0].commit.commiter.date);
+      const lastCommitDate = new Date(commits[0].commit.committer.date);
       // Displaying the time on load
-      document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocalString()}`;
+      document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
     } else {
-      document.getElementById('last-updated').innerText = 'No commits found in the repository';
+        document.getElementById('last-updated').innerText = 'No commits found in the repository.';
     }
-  } catch (error){
-      console.error('Errorr fetching the alst updated time:', error);
+  } catch (error) {
+      console.error('Error fetching the last updated time:', error);
       document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details.';
   }
 }
@@ -62,8 +62,8 @@ function displayTotalWordCount() {
   const ConclusionCount = displayWordCount("Conclusion_InText");
 
   // Calculate the sum of all selected sections
-  const totalWordCount = IntroductionCount + CryptoAlgorCount + quantumAlgorCount + impactCount
-                        + quantumResistCount + ConclusionCount
+  const totalWordCount = IntroductionCount + CryptoAlgorCount + QuantumAlgorCount + ImpactCount
+                        + QuantumResistCount + ConclusionCount;
 
   // Display the total word count
   document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
