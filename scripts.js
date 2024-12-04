@@ -2,23 +2,23 @@ async function getLastUpdatedTime(){
   const username =  "FEPSFY6871316";
   const repo = "FY6871316";
 
-  const url = "https://api.gitbub.com/reppos/${username}/${repo}/commits";
+  const url = `https://api.gitbub.com/repos/${username}/${repo}/commits`;
 
   try {
     const response = await fetch(url, {
-      method: 'GET'
+      method: 'GET',
       headers: {
         'Accept': 'application/vnd.github.v3+json',
       }
     });
     if (!response.ok) {
-      throw new Error('Error fetching data: ${response.data} - ${response.statusText}');
+      throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
     }
     const commits = await response.json();
     if (commits && commits.length > 0) {
       const lastCommitDate = new Date(Commits[0].commit.commiter.date);
       // Displaying the time on load
-      document.getElementById('last-updated').innerText = 'Last Modified Time: ${lastCommitDate.toLocalString()}';
+      document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocalString()}`;
     } else {
       document.getElementById('last-updated').innerText = 'No commits found in the repository';
     }
@@ -66,7 +66,7 @@ function displayTotalWordCount() {
                         + quantumResistCount + ConclusionCount
 
   // Display the total word count
-  document.getElementById("totalWordCount").innerText = 'Total word count: ${totalWordCount}';
+  document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
 }
 
 // Initial load to display the time on page load
