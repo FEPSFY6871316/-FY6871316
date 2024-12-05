@@ -3,12 +3,12 @@ table {
     margin:auto;
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width:80%;
+    width:50%;
 }
 
 td, th {
     border: 1px solid #dddddd;
-    text-align: left;
+    text-align: center;
     padding: 8px;
 }
 
@@ -19,6 +19,7 @@ tr:nth-child(even) {
 p.ex1 {
     margin-left: 250px;
     background-color: blue;
+    color: beige;
 }
 
 .mySlides {
@@ -26,7 +27,7 @@ p.ex1 {
 }
 
 body {
-    background-color:whitesmoke;
+    background-color:white;
     margin-left: 15px;
 }
 
@@ -34,4 +35,5 @@ button {
     display: block;
     margin: 10px auto;
     padding: 8px 16px;
+    border-radius: 5px;
 }
